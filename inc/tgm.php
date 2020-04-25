@@ -35,6 +35,16 @@ function my_theme_register_required_plugins() {
 			'slug'      => 'attachments',
 			'required'  => false,
 		),
+		array(
+			'name'      => 'Contact Forms 7',
+			'slug'      => 'contact-form-7',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Wp Google Maps',
+			'slug'      => 'wp-google-maps',
+			'required'  => false,
+		),
 
 	);
 	$config = array(

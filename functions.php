@@ -67,3 +67,48 @@ function philosophy_paginate(){
     echo $links;
 
 }
+
+remove_action( "term_description", "wpautop" );
+
+function philosophy_widgets(){
+    register_sidebar( array(
+        'name'          => __( 'About Page Widget', 'philosophy' ),
+        'id'            => 'about_page_widget',
+        'description'   => __( 'Widgets in this area will be shown under about page.', 'philosophy' ),
+        'before_widget' => '<div id="%1$s" class="col-block">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="quarter-top-margin">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Contact Map Widget', 'philosophy' ),
+        'id'            => 'contact_map',
+        'description'   => __( 'Widgets in this area will be shown under contact page.', 'philosophy' ),
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Contact Info Widget', 'philosophy' ),
+        'id'            => 'contact_info',
+        'description'   => __( 'Widgets in this area will be shown under contact page.', 'philosophy' ),
+        'before_widget' => '<div id="%1$s" class="col-block %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="quarter-top-margin">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Before Footer Widget', 'philosophy' ),
+        'id'            => 'before_footer',
+        'description'   => __( 'Widgets in this area will be shown under before footer.', 'philosophy' ),
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'philosophy_widgets' );

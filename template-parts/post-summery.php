@@ -4,7 +4,7 @@
         <div class="entry__date">
             <a href="single-audio.html"><?php echo esc_html( get_the_date() ); ?></a>
         </div>
-        <h1 class="entry__title"><a href="single-audio.html"><?php the_title(); ?></a></h1>
+        <h1 class="entry__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
         
     </div>
     <div class="entry__excerpt">

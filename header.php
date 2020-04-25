@@ -22,7 +22,9 @@
 
     <!-- pageheader
     ================================================== -->
-    <section class="s-pageheader s-pageheader--home">
+    <section class="s-pageheader <?php if ( is_home() ) {
+        echo "s-pageheader--home";
+    } ?>">
 
         <header class="header">
             <div class="header__content row">
@@ -69,6 +71,10 @@
             </div> <!-- header-content -->
         </header> <!-- header -->
 
-        <?php get_template_part( "template-parts/featured" ); ?>
+        <?php
+        if ( is_home() ) {
+            get_template_part( "template-parts/featured" ); 
+        }
+        ?>
 
     </section> <!-- end s-pageheader -->
