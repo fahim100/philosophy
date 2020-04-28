@@ -8,5 +8,14 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: philosophy
-Tags: blog, edication
+Tags: blog
 */
+
+.header__logo h1{
+    margin: 0;
+}
+.header__logo h1 a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}

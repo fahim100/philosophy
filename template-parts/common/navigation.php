@@ -8,12 +8,12 @@
     <?php __( "Site Navigation", "philosophy" ); ?>
     </h2>
 
-    <?php 
-    wp_nav_menu( array(
-        'theme_location' => 'topmenu',
-        'menu_id' => 'topmenu',
-        'menu_class' => 'header__nav'
-    ) );
+    <?php
+        wp_nav_menu( array(
+            'theme_location' => 'topmenu',
+            'menu_id'        => 'topmenu',
+            'menu_class'     => 'header__nav',
+        ) );
     ?>
 
     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">
